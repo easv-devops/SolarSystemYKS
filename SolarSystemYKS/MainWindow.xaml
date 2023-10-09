@@ -1,0 +1,44 @@
+﻿<Window x:Class="SolarSystemApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Solar System" Width="800" Height="800">
+    <Grid>
+        <Canvas Name="SolarSystemCanvas" Background="Black">
+            <!-- Solen (placeret centralt) -->
+            <Ellipse Name="Sun" Width="50" Height="50" Fill="Yellow" Canvas.Left="595" Canvas.Top="264"/>
+            <TextBlock Name="SunName" Text="Solen" Foreground="White" FontSize="16" Canvas.Left="606" Canvas.Top="319"/>
+
+            <!-- Merkur -->
+            <Ellipse Name="Merkur" Width="10" Height="10" Fill="Gray" />
+            <TextBlock Name="MerkurName" Text="Merkur" Foreground="White" FontSize="10"/>
+
+            <!-- Venus -->
+            <Ellipse Name="Venus" Width="15" Height="15" Fill="Orange" />
+            <TextBlock Name="VenusName" Text="Venus" Foreground="White" FontSize="10"/>
+
+            <!-- Jorden -->
+            <Ellipse Name="Jorden" Width="15" Height="15" Fill="Blue" />
+            <TextBlock Name="JordenName" Text="Jorden" Foreground="White" FontSize="10"/>
+
+            <!-- Mars -->
+            <Ellipse Name="Mars" Width="12" Height="12" Fill="Red" />
+            <TextBlock Name="MarsName" Text="Mars" Foreground="White" FontSize="10"/>
+
+            <!-- Jupiter -->
+            <Ellipse Name="Jupiter" Width="40" Height="40" Fill="Orange" />
+            <TextBlock Name="JupiterName" Text="Jupiter" Foreground="White" FontSize="10"/>
+
+            <!-- Saturn -->
+            <Ellipse Name="Saturn" Width="35" Height="35" Fill="Gold" />
+            <TextBlock Name="SaturnName" Text="Saturn" Foreground="White" FontSize="10"/>
+
+            <!-- Uranus -->
+            <Ellipse Name="Uranus" Width="30" Height="30" Fill="LightSkyBlue" />
+            <TextBlock Name="UranusName" Text="Uranus" Foreground="White" FontSize="10"/>
+
+            <!-- Neptun -->
+            <Ellipse Name="Neptun" Width="28" Height="28" Fill="Blue" />
+            <TextBlock Name="NeptunName" Text="Neptun" Foreground="White" FontSize="10"/>
+        </Canvas>
+    </Grid>
+</Window>
