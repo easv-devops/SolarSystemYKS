@@ -1,0 +1,26 @@
+kind: pipeline
+type: docker
+name: default
+
+steps:
+- name: build
+  image: maven:3.6.3-jdk-11
+  commands:
+    - mvn clean install
+    - mvn test
+
+- name: code-analysis
+  image: maven:3.6.3-jdk-11
+  environment:
+    SONAR_HOST_URL:
+      from_secret: sonar_host_url
+    SONAR_LOGIN:
+      from_secret: sonar_login
+  commands:
+    - mvn sonar:sonar -Dsonar.host.url=${SONAR_HOST_URL} -Dsonar.login=${SONAR_LOGIN}
+
+trigger:
+  branch:
+    - master
+  event:
+    - push
